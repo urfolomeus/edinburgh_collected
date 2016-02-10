@@ -125,6 +125,12 @@ Rails.application.routes.draw do
 
   post '/temp_images' => 'temp_images#create'
 
+  get '/400' => 'exceptions#bad_request'
+  get '/401' => 'exceptions#not_authorized'
+  get '/404' => 'exceptions#not_found'
+  get '/422' => 'exceptions#unprocessable_entity'
+  get '/500' => 'exceptions#internal_server_error'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

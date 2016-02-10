@@ -37,5 +37,8 @@ module EdinburghStories
       :domain         => ENV['MAILGUN_SMTP_DOMAIN'],
       :authentication => :plain
     }
+
+    # Use custom exception pages
+    config.exceptions_app = self.routes
   end
 end
